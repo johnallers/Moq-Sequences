@@ -4,10 +4,10 @@
   <property name="msbuild.verbosity" value="normal"/>
   <property name="bin.dir"           value="src\bin\${configuration}" dynamic="true" />
   <property name="log.dir"           value="${path::get-full-path('build\log')}\${configuration}" dynamic="true" />
-  <property name="lib.dir"           value="src\lib"/>
+  <property name="lib.dir"           value="src\packages"/>
 
-  <property name="nunit.version"     value="2.5.5.10112"/>
-  <property name="nunit.exe"         value="${lib.dir}\NUnit\${nunit.version}\bin\net-2.0\nunit-console.exe"/>
+  <property name="nunit.version"     value="2.5.10.11092"/>
+  <property name="nunit.exe"         value="${lib.dir}\NUnit.${nunit.version}\tools\nunit-console.exe"/>
   <property name="nunit.output"      value="${log.dir}/UnitTestReport.xml" dynamic="true"/>
   <property name="nunit.assemblies"  value="Moq.Sequences.dll"/>
   <property name="nunit.args"        value='${nunit.assemblies} /nologo /nodots /noshadow /xml="${nunit.output}" /framework:net-4.0' dynamic="true"/>
